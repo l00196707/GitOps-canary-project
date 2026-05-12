@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 VERSION = os.getenv("APP_VERSION", "Version 1")
 
+
 @app.route("/")
 def home():
     """
@@ -17,4 +18,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
-
