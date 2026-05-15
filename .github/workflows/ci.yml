@@ -27,5 +27,13 @@ jobs:
             - name: Lint
               run: flake8 .
 
-            - name: Build Docker image with tag
-              run: docker build -t flask-app:${{ github.sha }} .
+            - name: Log in to Docker Hub
+              uses: docker/login-action@v4
+              with:
+                username: ${{ secrets.DOCKERHUB_USERNAME }}
+                password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+            - name: Build and push Docker image with tag
+              run: |
+                docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/flask-app:${{ github.sha }} .
+                docker push ${{ secrets.DOCKERHUB_TOKEN }}/flask-canary-app:${{github.sha}}
