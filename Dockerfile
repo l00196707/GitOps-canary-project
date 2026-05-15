@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app/ .
 
-ENV APP_VERSION=Version1
+ENV APP_VERSION=Version2
 
 EXPOSE 5000
 
