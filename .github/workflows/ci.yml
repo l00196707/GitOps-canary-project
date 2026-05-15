@@ -36,4 +36,4 @@ jobs:
             - name: Build and push Docker image with tag
               run: |
                 docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/flask-canary-app:${{ github.sha }} .
-                docker push ${{ secrets.DOCKERHUB_TOKEN }}/flask-canary-app:${{github.sha}}
+                docker push ${{ secrets.DOCKERHUB_USERNAME }}/flask-canary-app:${{github.sha}}
