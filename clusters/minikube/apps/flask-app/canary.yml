@@ -15,7 +15,7 @@ spec:
     targetPort: 5000
   
   ingress:
-  - name: flask-ingress
+    name: flask-ingress
   
   analysis:
     interval: 30s
