@@ -1,0 +1,27 @@
+apiVersion: flagger.app/v1beta1
+kind: Canary
+metadata:
+  name: flask-app
+  namespace: default
+
+spec:
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: flask-app
+
+  service:
+    port: 5000
+    targetPort: 5000
+
+  analysis:
+    interval: 30s
+    threshold: 5
+    maxWeight: 50
+    stepWeight: 10
+
+    metrics:
+    - name: request-success-rate
+      thresholdRange:
+        min: 99
+      interval: 30s
