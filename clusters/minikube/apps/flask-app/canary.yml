@@ -12,11 +12,7 @@ spec:
 
   service:
     name: flask-service
-    port: 5000
-    targetPort: 5000
-  
-  ingress:
-    name: flask-ingress
+    port: 80
   
   analysis:
     interval: 30s

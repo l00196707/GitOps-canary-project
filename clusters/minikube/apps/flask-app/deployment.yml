@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
     name: flask-app
     namespace: default
+    
 spec:
     replicas: 3
     selector:
