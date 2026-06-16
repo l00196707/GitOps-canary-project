@@ -13,7 +13,10 @@ spec:
   service:
     port: 5000
     targetPort: 5000
-
+  
+  ingress:
+  - name: flask-ingress
+  
   analysis:
     interval: 30s
     threshold: 5
