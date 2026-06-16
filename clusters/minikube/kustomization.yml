@@ -5,3 +5,4 @@ resources:
 - flux-system
 - apps/flask-app
 - infrastructure/flagger
+- infrastructure/prometheus
