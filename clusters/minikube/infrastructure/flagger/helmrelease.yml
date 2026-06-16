@@ -17,3 +17,4 @@ spec:
 
   values:
     meshProvider: nginx
+    metricsServer: http://prometheus-server.monitoring:80
