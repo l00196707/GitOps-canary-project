@@ -13,9 +13,15 @@ spec:
     kind: Deployment
     name: flask-app
 
+  ingressRef:
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    name: flask-ingress
+
   service:
     name: flask-service
     port: 5000
+
 
   analysis:
     interval: 30s
