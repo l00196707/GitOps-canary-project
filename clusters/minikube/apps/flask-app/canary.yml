@@ -1,10 +1,13 @@
 apiVersion: flagger.app/v1beta1
 kind: Canary
+
 metadata:
   name: flask-app
   namespace: default
 
 spec:
+  provider: nginx
+
   targetRef:
     apiVersion: apps/v1
     kind: Deployment
@@ -13,7 +16,7 @@ spec:
   service:
     name: flask-service
     port: 5000
-  
+
   analysis:
     interval: 30s
     threshold: 5
