@@ -3,8 +3,12 @@ kind: Ingress
 metadata:
   name: flask-ingress
   namespace: default
+  annotations:
+    flagger.app/ingress-name: flask-ingress
+
 spec:
   ingressClassName: nginx
+  
   rules:
   - host: flask.local
     http:
