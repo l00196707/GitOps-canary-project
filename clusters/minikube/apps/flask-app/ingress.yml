@@ -17,6 +17,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: flask-service
+            name: flask-service-primary
             port:
               number: 5000
