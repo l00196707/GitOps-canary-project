@@ -3,9 +3,7 @@ kind: Ingress
 metadata:
   name: flask-ingress
   namespace: default
-  annotations:
-    kubernetes.io/ingress-class: nginx
-
+ 
 spec:
   ingressClassName: nginx
   
@@ -17,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: flask-service-primary
+            name: flask-app
             port:
               number: 5000
