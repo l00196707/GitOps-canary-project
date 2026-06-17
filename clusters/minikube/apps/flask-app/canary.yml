@@ -12,7 +12,7 @@ spec:
 
   service:
     name: flask-service
-    port: 80
+    port: 5000
   
   analysis:
     interval: 30s
