@@ -17,9 +17,9 @@ spec:
       spec:
         containers:
         - name: flask-app
-          image: stephenkuria/flask-canary-app:v1
+          image: stephenkuria/flask-canary-app:v2
           ports:
           - containerPort: 5000
           env:
           - name: APP_VERSION
-            value: "Version1" 
+            value: "Version2" 
